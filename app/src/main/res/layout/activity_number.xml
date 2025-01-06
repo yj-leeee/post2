@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".number"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="300dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="고객님의 순서는 %d번 입니다. \n 잠시만 기다려주십시오."
+        android:textAlignment="center"
+        android:textSize="17dp"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:id="@+id/maingo"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
