@@ -28,7 +28,7 @@ public class otherNature extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //화면 전환
-                Intent intent = new Intent(otherNature.this, otherNature.class);
+                Intent intent = new Intent(otherNature.this, otherFamily.class);
                 startActivity(intent);
 
             }

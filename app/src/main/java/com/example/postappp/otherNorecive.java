@@ -35,7 +35,7 @@ public class otherNorecive extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //화면 전환
-                Intent intent = new Intent(otherNorecive.this, otherFamily.class);
+                Intent intent = new Intent(otherNorecive.this, otherNature.class);
                 startActivity(intent);
                 finish();
 

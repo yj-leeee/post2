@@ -34,7 +34,7 @@ public class otherNoCompany extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //화면 전환
-                Intent intent = new Intent(otherNoCompany.this, otherJajick.class);
+                Intent intent = new Intent(otherNoCompany.this, otherCompany.class);
                 startActivity(intent);
                 finish();
 
