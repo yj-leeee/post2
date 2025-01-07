@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>진주우체국 등기 교부 시스템</title>
+    <style>
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+       <h1>어서오십시오 진주우체국 등기교부 도움말입니다</h1> 
+       <p>도착 증명서를 가지고 오시면 빠른 등기수령이 가능합니다.</p>
+       <p>법원특송, 본인지정등기는 대리인 수령이 불가능합니다.</p>
+       <p>내용증명같은경우 대리인 수령시 본인과 통화가 필요합니다.</p>
+    
+    <button id="one_nature">
+        본인-개인 수령
+    </button>
+    <button id="one_company">
+        본인-법인 수령
+    </button>
+    <button id="other_nature">
+        대리인-개인 수령
+    </button>
+    <button id="other_company">
+        대리인-법인 수령
+    </button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">닫기</button>
+    </div>
+
+    <script>
+        function openPopup(message) {
+            document.getElementById('popupMessage').innerText = message;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.getElementById('one_nature').addEventListener('click', function() {
+            openPopup('신분증을 지참하셔야 합니다.');
+        });
+
+        document.getElementById('one_company').addEventListener('click', function() {
+            openPopup('신분증, 사업증명서를를 지참하셔야 합니다.');
+        });
+
+        document.getElementById('other_nature').addEventListener('click', function() {
+            openPopup('대리인 신분증, 가족관계증명서를를 지참하셔야 합니다.');
+        });
+
+        document.getElementById('other_company').addEventListener('click', function() {
+            openPopup('대리인 신분증, 재직증명서, 사업증명서를 지참하셔야 합니다.');
+        });
+
+    </script>
+</body>
+</html>
