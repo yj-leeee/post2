@@ -6,4 +6,4 @@ eclipse : 이클립스로 자바로 코드 작성
 
 yj-leeee-patch-1 : 간단한 홈페이지
 각 버튼을 누르면 필요한 준비물을 볼 수 있게끔 구성
-![Uploading image.png…]()
+
